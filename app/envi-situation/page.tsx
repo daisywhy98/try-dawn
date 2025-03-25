@@ -7,8 +7,7 @@ import SendEmail from '../components/SendEmail';
 
 const page = () => {
     return (
-        <div>
-          
+        <div>   
             <ul>
                 <li><Link href="/envi-situation/panda">Panda</Link></li>
                 <li><Link href="/envi-situation/lion">Lion</Link></li>

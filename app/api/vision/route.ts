@@ -6,13 +6,10 @@ import { NextResponse} from "next/server";
 
 
 
-export async function Post(){
+export async function Post(req: Request){
     try{
-        return new NextResponse(
-            JSON.stringify({
-                message:"hello!"
-            })
-        )
+        console.log(req)
+        return NextResponse.json({ message: "hello" });
     }catch (error){
      console.log(error);
     }

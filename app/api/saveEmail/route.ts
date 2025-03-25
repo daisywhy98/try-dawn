@@ -17,7 +17,7 @@ export async function POST(req: Request) {
       const data = await fs.readFile(filePath, "utf-8");
       emails = JSON.parse(data);
     } catch (err) {
-      console.log("Creating new emails.json file...");
+      console.log("Creating new emails.json file...",err);
     }
 
     // 添加新邮箱
@@ -28,6 +28,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ message: "Email saved successfully!" });
   } catch (error) {
+    console.log(error);
     return NextResponse.json({ error: "Failed to save email" }, { status: 500 });
   }
 }

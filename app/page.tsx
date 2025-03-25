@@ -38,8 +38,9 @@ export default function Home() {
       const data = await res.json();
       setScore(data.score);
       setPreview(data.imageUrl);
-    } catch (err: any) {
-      setError(err.message || "上传失败");
+    } catch (err) {
+      console.log(err);
+      setError("上传失败");
     } finally {
       setLoading(false);
     }

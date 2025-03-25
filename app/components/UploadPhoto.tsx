@@ -17,14 +17,14 @@ export default function UploadPhoto() {
     };
     const openaiTry=async ()=>{
       console.log("try");
-      try{
-        const res = await fetch("/api/vision", {
-          method: "POST",
+      // try{
+      //   const res = await fetch("/api/vision", {
+      //     method: "POST",
           
-        });
-      }catch{
+      //   });
+      // }catch{
 
-      }
+      // }
     }
 
 

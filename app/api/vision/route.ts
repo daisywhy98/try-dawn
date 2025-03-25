@@ -1,22 +1,22 @@
-import { NextResponse} from "next/server";
-import OpenAI from "openai";
-const openai = new OpenAI(
-   { apiKey:process.env.OPEN_AI_KEY,}
-);
+// import { NextResponse} from "next/server";
+// import OpenAI from "openai";
+// const openai = new OpenAI(
+//    { apiKey:process.env.OPEN_AI_KEY,}
+// );
 
 
 
-export async function Post(){
-    try{
-        return new NextResponse(
-            JSON.stringify({
-                message:"hello!"
-            })
-        )
-    }catch (error){
+// export async function Post(){
+//     try{
+//         return new NextResponse(
+//             JSON.stringify({
+//                 message:"hello!"
+//             })
+//         )
+//     }catch (error){
 
-    }
-}
+//     }
+// }
 
 
 

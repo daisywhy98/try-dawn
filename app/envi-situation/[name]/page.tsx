@@ -1,19 +1,14 @@
-import React, { FC } from 'react';
+import React from 'react';
 
-interface PageProps {
-  params: {
-    name: string;
-  };
-}
-
-const Page: FC<PageProps> = ({ params }) => {
+const Page = async ({ params }: { params: { name: string } }) => {
   const { name } = params;
+  
   return (
     <div>
-      <div className='text-3xl'>detail pages for {name}</div>
+      <div className='text-3xl'>Detail pages for {name}</div>
       <img />
     </div>
   );
-}
+};
 
 export default Page;

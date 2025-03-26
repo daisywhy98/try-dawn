@@ -1,15 +1,19 @@
+import React, { FC } from 'react';
 
-import React from 'react'
-
-const page = ({ params }: { params: { name: string } }) => {
-    const { name } = params;
-    return (
-        <div>
-           
-            <div className='text-3xl'>detail pages for {name}</div>
-            <img></img>
-        </div>
-    )
+interface PageProps {
+  params: {
+    name: string;
+  };
 }
 
-export default page
+const Page: FC<PageProps> = ({ params }) => {
+  const { name } = params;
+  return (
+    <div>
+      <div className='text-3xl'>detail pages for {name}</div>
+      <img />
+    </div>
+  );
+}
+
+export default Page;

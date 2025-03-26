@@ -1,12 +1,9 @@
-import React from 'react';
 
-const Page = async ({ params }: { params: { name: string } }) => {
-  return (
-    <div>
-      <div className='text-3xl'>Detail pages for {params.name}</div>
-      <img />
-    </div>
-  );
-};
-
-export default Page;
+export default async function Page({
+    params,
+  }: {
+    params: Promise<{ name: string }>
+  }) {
+    const { name } = await params
+    return <div> Detail pages for  {name}</div>
+  }
